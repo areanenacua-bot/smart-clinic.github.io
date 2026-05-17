@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Clinic | Staff Portal Guide</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap');
+        body { font-family: 'Inter', sans-serif; scroll-behavior: smooth; }
+        .hero-gradient { background: linear-gradient(135deg, #8C0000 0%, #4a0000 100%); }
+        .guide-card { background: rgba(255,255,255,0.12); border: 1px solid rgba(255,255,255,0.22); box-shadow: 0 24px 70px rgba(0,0,0,0.22); }
+        .guide-chip { background: rgba(255,255,255,0.14); border: 1px solid rgba(255,255,255,0.18); }
+        .feature-icon { background: rgba(140,0,0,0.1); color: #8C0000; }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-900 overflow-x-hidden">
+
+    <nav class="sticky top-0 z-50 bg-white/90 backdrop-blur border-b border-gray-200 shadow-sm">
+        <div class="container mx-auto px-6 py-4 flex flex-col md:flex-row items-center justify-between gap-3">
+            <a href="#" class="flex items-center gap-3 text-red-800 font-bold text-lg">
+                <img src="web_app/imgs/logo.png" alt="Smart Clinic logo" class="w-10 h-10 rounded-lg object-cover" onerror="this.src='mobile_app/res/icon_logo.png'">
+                <span>Smart Clinic Staff Guide</span>
+            </a>
+            <div class="flex flex-wrap items-center gap-3">
+                <a href="#roles" class="text-gray-700 hover:text-red-800 font-medium">Roles</a>
+                <a href="#workflows" class="text-gray-700 hover:text-red-800 font-medium">Workflows</a>
+                <a href="#security" class="text-gray-700 hover:text-red-800 font-medium">Security</a>
+                <a href="https://smartclinicapp-188c5.web.app" class="inline-flex items-center gap-2 px-4 py-2 bg-red-700 text-white rounded-full shadow-sm hover:bg-red-600 transition">
+                    <i class="fas fa-arrow-up-right-from-square"></i>
+                    Open Portal
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <header class="hero-gradient text-white relative overflow-hidden min-h-[82vh] flex items-center">
+        <div class="absolute top-[-10%] right-[-10%] w-96 h-96 bg-white/10 rounded-full blur-3xl"></div>
+        <div class="absolute bottom-[-10%] left-[-10%] w-80 h-80 bg-red-500/20 rounded-full blur-3xl"></div>
+
+        <div class="container mx-auto px-6 py-20 relative z-10">
+            <div class="max-w-5xl">
+                <div class="inline-flex items-center space-x-2 bg-white/10 px-4 py-2 rounded-full mb-6 border border-white/20">
+                    <span class="w-2 h-2 bg-green-400 rounded-full animate-pulse"></span>
+                    <span class="text-sm font-medium tracking-wide uppercase">Clinic Staff, Admin, and Super Admin Guide</span>
+                </div>
+                <h1 class="text-5xl lg:text-7xl font-bold leading-tight mb-6">
+                    Run Smart Clinic <br>
+                    <span class="text-red-200">With Confidence</span>
+                </h1>
+                <p class="text-xl text-red-50 opacity-90 mb-8 max-w-3xl">
+                    A practical guide for using the web portal, handling emergency alerts, managing clinical workflows, and keeping system access organized.
+                </p>
+
+                <div class="guide-card rounded-3xl p-5 mb-8 max-w-3xl backdrop-blur">
+                    <div class="grid md:grid-cols-3 gap-3">
+                        <div class="guide-chip rounded-2xl p-4">
+                            <i class="fas fa-user-nurse text-2xl mb-3"></i>
+                            <p class="font-bold">Clinic Staff</p>
+                            <p class="text-sm text-red-100">Appointments, records, inventory, SOS handling.</p>
+                        </div>
+                        <div class="guide-chip rounded-2xl p-4">
+                            <i class="fas fa-user-shield text-2xl mb-3"></i>
+                            <p class="font-bold">Admin</p>
+                            <p class="text-sm text-red-100">Users, reports, announcements, oversight.</p>
+                        </div>
+                        <div class="guide-chip rounded-2xl p-4">
+                            <i class="fas fa-shield-halved text-2xl mb-3"></i>
+                            <p class="font-bold">Super Admin</p>
+                            <p class="text-sm text-red-100">Access control, system settings, campus map.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flex flex-col sm:flex-row gap-4">
+                    <a href="https://smartclinicapp-188c5.web.app" class="px-8 py-4 bg-white text-red-800 font-bold rounded-2xl shadow-xl hover:bg-red-50 transition transform hover:-translate-y-1 flex items-center justify-center gap-3">
+                        <i class="fas fa-globe"></i>
+                        <span>Firebase Web Portal</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section id="roles" class="py-24 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-3xl font-bold mb-4">Role Responsibilities</h2>
+                <p class="text-gray-600">Each portal role has a different responsibility. Use the correct account so records, logs, and permissions stay clean.</p>
+                <div class="w-20 h-1.5 bg-red-700 mx-auto rounded-full mt-6"></div>
+            </div>
+
+            <div class="grid lg:grid-cols-3 gap-8">
+                <div class="p-8 rounded-3xl bg-gray-50 border border-gray-100">
+                    <div class="w-14 h-14 feature-icon flex items-center justify-center rounded-2xl text-2xl mb-6"><i class="fas fa-kit-medical"></i></div>
+                    <h3 class="text-xl font-bold mb-3">Clinic Staff</h3>
+                    <p class="text-gray-600 mb-5">Handles daily clinic operations and patient-facing workflows.</p>
+                    <ul class="space-y-3 text-gray-700">
+                        <li><i class="fas fa-check text-red-700 mr-2"></i>Manage appointments and walk-in records</li>
+                        <li><i class="fas fa-check text-red-700 mr-2"></i>Update medical records and health profiles</li>
+                        <li><i class="fas fa-check text-red-700 mr-2"></i>Track inventory, treatments, and prescriptions</li>
+                        <li><i class="fas fa-check text-red-700 mr-2"></i>Monitor and respond to SOS alerts</li>
+                    </ul>
+                </div>
+
+                <div class="p-8 rounded-3xl bg-gray-50 border border-gray-100">
+                    <div class="w-14 h-14 feature-icon flex items-center justify-center rounded-2xl text-2xl mb-6"><i class="fas fa-chart-line"></i></div>
+                    <h3 class="text-xl font-bold mb-3">Admin</h3>
+                    <p class="text-gray-600 mb-5">Oversees campus users, reports, announcements, and operational visibility.</p>
+                    <ul class="space-y-3 text-gray-700">
+                        <li><i class="fas fa-check text-red-700 mr-2"></i>Create and manage student, faculty, and staff users</li>
+                        <li><i class="fas fa-check text-red-700 mr-2"></i>Review dashboards and reports</li>
+                        <li><i class="fas fa-check text-red-700 mr-2"></i>Broadcast announcements</li>
+                        <li><i class="fas fa-check text-red-700 mr-2"></i>Audit emergency and clinical activity</li>
+                    </ul>
+                </div>
+
+                <div class="p-8 rounded-3xl bg-gray-50 border border-gray-100">
+                    <div class="w-14 h-14 feature-icon flex items-center justify-center rounded-2xl text-2xl mb-6"><i class="fas fa-sliders"></i></div>
+                    <h3 class="text-xl font-bold mb-3">Super Admin</h3>
+                    <p class="text-gray-600 mb-5">Controls high-trust settings that affect the whole system.</p>
+                    <ul class="space-y-3 text-gray-700">
+                        <li><i class="fas fa-check text-red-700 mr-2"></i>Create Admin, Clinic Staff, and ERT accounts</li>
+                        <li><i class="fas fa-check text-red-700 mr-2"></i>Configure maintenance and access policies</li>
+                        <li><i class="fas fa-check text-red-700 mr-2"></i>Manage campus map, landmarks, and SOS radius</li>
+                        <li><i class="fas fa-check text-red-700 mr-2"></i>Review system-wide audit logs</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="workflows" class="py-24 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <div class="max-w-5xl mx-auto">
+                <div class="text-center mb-14">
+                    <h2 class="text-3xl font-bold mb-4">Daily Workflow Checklist</h2>
+                    <p class="text-gray-600">Use this as a quick operating rhythm before, during, and after clinic hours.</p>
+                </div>
+                <div class="grid md:grid-cols-2 gap-6">
+                    <div class="bg-white p-7 rounded-3xl border border-gray-100 shadow-sm">
+                        <h3 class="font-bold text-xl mb-4"><i class="fas fa-sun text-red-800 mr-2"></i>Start of Day</h3>
+                        <p class="text-gray-600">Check nurse availability, active appointments, low-stock medicine, pending forms, and unresolved SOS records.</p>
+                    </div>
+                    <div class="bg-white p-7 rounded-3xl border border-gray-100 shadow-sm">
+                        <h3 class="font-bold text-xl mb-4"><i class="fas fa-truck-medical text-red-800 mr-2"></i>During SOS</h3>
+                        <p class="text-gray-600">Open the SOS alert, verify location, coordinate ERT or clinic staff response, and update the case status promptly.</p>
+                    </div>
+                    <div class="bg-white p-7 rounded-3xl border border-gray-100 shadow-sm">
+                        <h3 class="font-bold text-xl mb-4"><i class="fas fa-pills text-red-800 mr-2"></i>Inventory Movement</h3>
+                        <p class="text-gray-600">Record medicine additions, stock adjustments, OTC treatments, and prescription dispensing immediately.</p>
+                    </div>
+                    <div class="bg-white p-7 rounded-3xl border border-gray-100 shadow-sm">
+                        <h3 class="font-bold text-xl mb-4"><i class="fas fa-moon text-red-800 mr-2"></i>End of Day</h3>
+                        <p class="text-gray-600">Review reports, confirm resolved cases, check movement logs, and sign out of shared computers.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="security" class="py-24 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="max-w-4xl mx-auto bg-gray-50 rounded-[2rem] border border-gray-100 p-8 md:p-12">
+                <h2 class="text-3xl font-bold mb-6">Security and Data Handling</h2>
+                <div class="space-y-5 text-gray-700">
+                    <p><strong>Use individual accounts.</strong> Avoid sharing accounts because audit logs record who created, edited, dispatched, or resolved records.</p>
+                    <p><strong>Protect patient information.</strong> Medical records and health profiles should be opened only when needed for clinic work.</p>
+                    <p><strong>Keep Super Admin actions limited.</strong> Account control, campus map settings, and maintenance mode affect multiple users and should be changed carefully.</p>
+                    <p><strong>Sign out after use.</strong> This matters especially on shared clinic computers or demonstration laptops.</p>
+                </div>
+                <div class="mt-8 p-5 rounded-2xl bg-white border border-gray-200">
+                    <p class="text-sm uppercase tracking-widest font-bold text-red-800 mb-2">Portal Link</p>
+                    <a href="https://smartclinicapp-188c5.web.app" class="text-lg md:text-xl font-bold text-gray-900 hover:text-red-800 break-all">https://smartclinicapp-188c5.web.app</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-24 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <div class="max-w-4xl mx-auto">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl font-bold mb-4">Troubleshooting</h2>
+                    <p class="text-gray-600">If something does not load, start with access, rules, and connection checks.</p>
+                </div>
+                <div class="space-y-4">
+                    <div class="p-6 rounded-2xl border border-gray-100 bg-white">
+                        <h3 class="font-bold mb-2"><i class="fas fa-lock text-red-800 mr-2"></i>Page keeps loading</h3>
+                        <p class="text-gray-600">Confirm the account is active and has the correct role. A permission-denied read can make dashboards appear stuck.</p>
+                    </div>
+                    <div class="p-6 rounded-2xl border border-gray-100 bg-white">
+                        <h3 class="font-bold mb-2"><i class="fas fa-bell text-red-800 mr-2"></i>Notifications are not arriving</h3>
+                        <p class="text-gray-600">Ask the user or ERT member to log in again so the FCM token refreshes, then confirm Cloud Functions are deployed.</p>
+                    </div>
+                    <div class="p-6 rounded-2xl border border-gray-100 bg-white">
+                        <h3 class="font-bold mb-2"><i class="fas fa-map-location-dot text-red-800 mr-2"></i>Map landmarks are missing</h3>
+                        <p class="text-gray-600">Super Admin should open Campus Map and import or add active landmarks. ERT will use fallback landmarks until managed data exists.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-gray-900 text-gray-400 py-12">
+        <div class="container mx-auto px-6 text-center">
+            <div class="flex items-center justify-center space-x-3 mb-6">
+                <img src="web_app/imgs/logo.png" class="w-10 h-10 rounded-lg grayscale opacity-50" onerror="this.src='mobile_app/res/icon_logo.png'">
+                <span class="text-white font-bold tracking-tight text-xl">Smart Clinic Staff Guide</span>
+            </div>
+            <p class="mb-6">Developed by BSIT 3 students for Academic Thesis Purposes.</p>
+            <p class="text-sm">&copy; 2026 MSU SND. All Rights Reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
